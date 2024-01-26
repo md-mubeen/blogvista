@@ -50,7 +50,7 @@ function Header() {
         <nav className="flex items-center justify-between">
           <div className="ml-0 mr-3 mt-0">
             <Link to="/">
-              <Logo width="70px" height="20px" />
+              <Logo />
             </Link>
           </div>
           <div className="lg:hidden ">
@@ -75,14 +75,13 @@ function Header() {
             </button>
           </div>
           {mobileMenuOpen && (
-            <div className="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50">
-              <div className="text-white text-center mt-20">
+            <div className="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50 ">
+              <div className="text-white text-center mt-20 font-semibold">
                 <button
                   className="text-white text-xl focus:outline-none absolute top-8 right-1/2"
                   onClick={closeMobileMenu}
                 >
-                  {/* Close button icon */}
-                  ✕
+                  {/* Close button icon */}✕
                 </button>
                 <ul>
                   {navItems.map(
@@ -92,7 +91,7 @@ function Header() {
                           key={item.name}
                           className={`py-2 text-xl ${
                             location.pathname === item.slug
-                              ? "bg-white text-black"
+                              ? "bg-white text-black font-bold"
                               : "hover:bg-gray-600"
                           }`}
                         >
@@ -127,10 +126,10 @@ function Header() {
                   <li key={item.name}>
                     <Link
                       to={item.slug}
-                      className={`inline-block px-4 py-2 mx-1 text-sm duration-200 rounded-full lg:text-lg ${
+                      className={`inline-block mx-4 py-2  text-sm duration-200 lg:text-lg ${
                         location.pathname === item.slug
-                          ? "bg-white  text-lg rounded-full text-black"
-                          : "text-white hover:bg-gray-600"
+                          ? " border-b-2 border-white text-lg font-semibold"
+                          : "text-white hover:font-bold"
                       }`}
                     >
                       {item.name}
@@ -138,8 +137,12 @@ function Header() {
                   </li>
                 )
             )}
+           
             {authStatus && (
-              <li className="py-2" onClick={() => setMobileMenuOpen(false)}>
+              <li
+                className="py-2 ml-6 font-semibold"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 <LogoutBtn />
               </li>
             )}

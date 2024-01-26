@@ -2,7 +2,7 @@ import React from 'react'
 
 function Logo() {
   return (
-    <img src='/logo.svg' alt='logo' />
+    <p className='font-signature text-4xl my-4 '>BlogVista</p>
   )
 }
 

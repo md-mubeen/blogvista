@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchPosts } from "../store/postSlice";
 import Loading from "../components/Loading";
 import { nanoid } from "@reduxjs/toolkit";
+import { Link } from "react-router-dom";
+import { MdAddCircleOutline } from "react-icons/md";
 
 function Home() {
   const dispatch = useDispatch();
@@ -25,10 +27,33 @@ function Home() {
       <div className="w-full py-8 mt-4 text-center">
         <Container>
           <div className="flex flex-wrap">
-            <div className="p-2 w-full flex items-center justify-center">
-              <h1 className="text-4xl font-bold hover:text-gray-500 font-mono">
-                {authStatus ? "No Blogs yet" : "Login to read posts"}
-              </h1>
+            <div className="p-2 w-full flex items-center justify-center flex-col text-2xl font-semibold">
+              {authStatus ? (
+                <>
+                  <p>
+                    Welcome, Buddy! Your blogging adventure starts now. Share
+                    your first story by clicking 'Create New Post'!
+                  </p>
+                  <Link to="/add-post">
+                    <button className="my-5 bg-red-600 text-white p-3 rounded-md flex items-center gap-2 transition-all duration-300 hover:p-2">
+                      Create New Post
+                      <span>
+                        <MdAddCircleOutline size={35} />
+                      </span>
+                    </button>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <p>
+                    Explore fascinating stories on 'BlogVista'. Log in to enjoy
+                    personalized content, or sign up to start your own blogging
+                    journey! 🌟💻
+                  </p>
+                  <div className="flex gap-8 mt-8"><Link to="/login"><button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 ">Login</button></Link>
+                  <Link to="/signup"><button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 ">Sign Up</button></Link>
+               </div></>
+              )}
             </div>
           </div>
         </Container>

@@ -73,7 +73,7 @@ const postsSlice = createSlice({
     status: "idle",
     error: null,
     deleteStatus: "idle",
-  }, // Add deleteStatus
+  }, 
   reducers: {},
   extraReducers: (builder) => {
     builder

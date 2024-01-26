@@ -17,7 +17,7 @@ function PostCard({ $id, title, featuredImage }) {
 
   return (
     <Link to={`/post/${$id}`}>
-      <div className="flex bg-gray-100 rounded-xl p-4 mb-4 items-center h-40">
+      <div className="flex bg-gray-100 rounded-xl p-4 mb-2 items-center h-30 sm:h-40">
         
         {featuredImage && (
           <img
@@ -25,7 +25,7 @@ function PostCard({ $id, title, featuredImage }) {
             alt={title}
             className="rounded-full mr-4"
             loading="lazy"
-            style={{ maxHeight: "100px" }}
+            style={{height:'100px', width:'100px' }}
           />
         )}
         

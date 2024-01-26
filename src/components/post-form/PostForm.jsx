@@ -75,7 +75,7 @@ export default function PostForm({ post }) {
 
   return (
     <form onSubmit={handleSubmit(submit)}>
-      <div className=" w-full lg:w-1/2 px-2 mx-auto">
+      <div className=" w-full lg:w-1/2 px-2 mx-auto font-semibold text-md">
         <Input
           label="Title :"
           placeholder="Title"
