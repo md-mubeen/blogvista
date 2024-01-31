@@ -13,7 +13,7 @@ function AllPosts() {
 
   useEffect(() => {
     dispatch(fetchPosts());
-  }, [dispatch,deleteStatus]);
+  }, [dispatch, deleteStatus]);
 
   if (status === "loading" || deleteStatus === "loading") {
     return <Loading />;

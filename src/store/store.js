@@ -6,8 +6,6 @@ const store = configureStore({
   reducer: {
     auth: authSlice,
     posts: postSlice,
-    
-   
   },
 });
 

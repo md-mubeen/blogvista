@@ -50,9 +50,19 @@ function Home() {
                     personalized content, or sign up to start your own blogging
                     journey! 🌟💻
                   </p>
-                  <div className="flex gap-8 mt-8"><Link to="/login"><button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 ">Login</button></Link>
-                  <Link to="/signup"><button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 ">Sign Up</button></Link>
-               </div></>
+                  <div className="flex gap-8 mt-8">
+                    <Link to="/login">
+                      <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 ">
+                        Login
+                      </button>
+                    </Link>
+                    <Link to="/signup">
+                      <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 ">
+                        Sign Up
+                      </button>
+                    </Link>
+                  </div>
+                </>
               )}
             </div>
           </div>

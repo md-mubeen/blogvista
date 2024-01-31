@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, PostForm } from "../components";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchPost } from "../store/postSlice"; 
+import { fetchPost } from "../store/postSlice";
 import { useNavigate, useParams } from "react-router-dom";
 
 function EditPost() {
